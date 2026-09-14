@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- OPENING -->
+    <section id="opening" class="opening">
+
+        <div class="opening-content">
+
+            <p>A LITTLE COLLECTION OF</p>
+
+            <h1>
+                Our<br>
+                <i>Memories</i>
+            </h1>
+
+            <span>
+                foto, video, dan cerita<br>
+                yang ingin kita simpan selamanya.
+            </span>
+
+            <button onclick="openMemory()">
+                Lihat Memories ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- WEBSITE -->
+    <main id="website" class="website">
+
+        <header>
+
+            <div>
+                OUR MEMORIES
+            </div>
+
+            <button onclick="toggleMusic()" id="musicButton">
+                ♫
+            </button>
+
+        </header>
+
+
+        <!-- INTRO -->
+        <section class="hero">
+
+            <p>A COLLECTION OF LITTLE MOMENTS</p>
+
+            <h2>
+                Some moments<br>
+                <i>deserve to stay.</i>
+            </h2>
+
+            <span>
+                Putar dan nikmati kenangan kita
+                satu per satu.
+            </span>
+
+        </section>
+
+
+        <!-- MEMORY VIEWER -->
+        <section class="memory-section">
+
+            <div class="counter">
+
+                <span id="currentNumber">01</span>
+                /
+                <span id="totalNumber">04</span>
+
+            </div>
+
+
+            <div class="memory-container">
+
+                <img
+                    id="memoryImage"
+                    class="memory-media"
+                    src=""
+                    alt="Memory"
+                >
+
+                <video
+                    id="memoryVideo"
+                    class="memory-media"
+                    playsinline
+                ></video>
+
+
+                <div class="memory-info">
+
+                    <small id="memoryDate">
+                        MEMORY
+                    </small>
+
+                    <h3 id="memoryTitle">
+                        Our Moment
+                    </h3>
+
+                    <p id="memoryDescription">
+                        A little memory.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+            <div class="controls">
+
+                <button onclick="previousMemory()">
+                    ←
+                </button>
+
+                <button
+                    id="playButton"
+                    onclick="toggleSlideshow()"
+                >
+                    ▶
+                </button>
+
+                <button onclick="nextMemory()">
+                    →
+                </button>
+
+            </div>
+
+
+            <div id="dots" class="dots"></div>
+
+        </section>
+
+
+        <!-- ENDING -->
+        <section class="ending">
+
+            <p>A LITTLE MESSAGE</p>
+
+            <h2>
+                Thank you for<br>
+                <i>being part of the story.</i>
+            </h2>
+
+            <div class="heart">
+                ♡
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MUSIC -->
+    <audio
+        id="backgroundMusic"
+        loop
+    >
+        <source src="music/music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
