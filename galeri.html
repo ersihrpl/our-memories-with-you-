@@ -3,635 +3,80 @@
 
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-<title>Our Gallery ♡</title>
+  <title>Galeri</title>
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-
-    background:#f5efe9;
-
-    color:#302a27;
-
-    font-family:Arial,sans-serif;
-
-}
-
-
-/* HEADER */
-
-header{
-
-    padding:25px 7%;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    border-bottom:1px solid #ddd2ca;
-
-}
-
-.back{
-
-    text-decoration:none;
-
-    color:#302a27;
-
-    font-size:14px;
-
-}
-
-.music{
-
-    border:1px solid #cfc3bb;
-
-    background:none;
-
-    width:40px;
-
-    height:40px;
-
-    border-radius:50%;
-
-}
-
-
-/* JUDUL */
-
-.title{
-
-    text-align:center;
-
-    padding:80px 20px 50px;
-
-}
-
-.title p{
-
-    font-size:10px;
-
-    letter-spacing:5px;
-
-    color:#8b817a;
-
-}
-
-.title h1{
-
-    font-family:Georgia,serif;
-
-    font-size:65px;
-
-    font-weight:normal;
-
-    line-height:.9;
-
-    margin-top:20px;
-
-}
-
-.title h1 i{
-
-    font-weight:normal;
-
-}
-
-
-/* GALERI */
-
-.gallery{
-
-    width:90%;
-
-    max-width:1000px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:12px;
-
-}
-
-
-/* FOTO */
-
-.photo{
-
-    width:100%;
-
-    height:330px;
-
-    object-fit:cover;
-
-    border-radius:4px;
-
-    cursor:pointer;
-
-    transition:.4s;
-
-}
-
-.photo:hover{
-
-    transform:scale(.97);
-
-}
-
-
-/* LIGHTBOX */
-
-.lightbox{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(20,18,16,.95);
-
-    display:none;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:999;
-
-}
-
-.lightbox.show{
-
-    display:flex;
-
-}
-
-.lightbox img{
-
-    max-width:90%;
-
-    max-height:85%;
-
-    object-fit:contain;
-
-}
-
-
-/* TOMBOL */
-
-.close{
-
-    position:absolute;
-
-    top:20px;
-
-    right:20px;
-
-    width:45px;
-
-    height:45px;
-
-    border-radius:50%;
-
-    border:1px solid white;
-
-    background:none;
-
-    color:white;
-
-    font-size:25px;
-
-}
-
-
-.prev,
-.next{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:50px;
-
-    height:50px;
-
-    border-radius:50%;
-
-    border:1px solid #ffffff80;
-
-    background:none;
-
-    color:white;
-
-    font-size:30px;
-
-}
-
-.prev{
-
-    left:20px;
-
-}
-
-.next{
-
-    right:20px;
-
-}
-
-
-/* FOOTER */
-
-footer{
-
-    text-align:center;
-
-    padding:100px 20px;
-
-    font-family:Georgia,serif;
-
-    font-size:30px;
-
-}
-
-
-/* HP */
-
-@media(max-width:700px){
-
-    .title{
-
-        padding:65px 20px 40px;
-
-    }
-
-    .title h1{
-
-        font-size:48px;
-
-    }
-
-    .gallery{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-        gap:8px;
-
-    }
-
-    .photo{
-
-        height:230px;
-
-    }
-
-}
-
-</style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/galeri.css">
 
 </head>
 
-
 <body>
 
+  <!-- NAVBAR -->
+  <nav>
 
-<!-- HEADER -->
+    <h2>Website Saya</h2>
 
-<header>
+    <ul>
 
-<a
-href="index.html"
-class="back">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
 
-← Kembali
+      <li>
+        <a href="index.html#about">Tentang</a>
+      </li>
 
-</a>
+      <li>
+        <a href="galeri.html">Galeri</a>
+      </li>
 
-<button
-class="music"
-onclick="toggleMusic()">
+    </ul>
 
-♫
+  </nav>
 
-</button>
 
-</header>
+  <!-- GALERI -->
+  <main class="gallery-container">
 
+    <div class="gallery-title">
 
-<!-- JUDUL -->
+      <h1>Galeri</h1>
 
-<section class="title">
+      <p>
+        Kumpulan foto saya
+      </p>
 
-<p>OUR LITTLE MOMENTS</p>
+    </div>
 
-<h1>
 
-Our<br>
+    <!-- DAFTAR FOTO -->
+    <div class="gallery">
 
-<i>Gallery</i>
+      <img src="foto/foto1.jpg" alt="Foto 1">
 
-</h1>
+      <img src="foto/foto2.jpg" alt="Foto 2">
 
-</section>
+      <img src="foto/foto3.jpg" alt="Foto 3">
 
+      <img src="foto/foto4.jpg" alt="Foto 4">
 
-<!-- ==================================
-     GALERI
+    </div>
 
-     TAMBAH / GANTI FOTO DI SINI
-================================== -->
+  </main>
 
-<section class="gallery">
 
-
-<img
-src="gallery/foto1.jpg"
-class="photo"
-onclick="openPhoto(0)"
->
-
-
-<img
-src="gallery/foto2.jpg"
-class="photo"
-onclick="openPhoto(1)"
->
-
-
-<img
-src="gallery/foto3.jpg"
-class="photo"
-onclick="openPhoto(2)"
->
-
-
-<img
-src="gallery/foto4.jpg"
-class="photo"
-onclick="openPhoto(3)"
->
-
-
-<img
-src="gallery/foto5.jpg"
-class="photo"
-onclick="openPhoto(4)"
->
-
-
-<img
-src="gallery/foto6.jpg"
-class="photo"
-onclick="openPhoto(5)"
->
-
-
-</section>
-
-
-<!-- LIGHTBOX -->
-
-<div
-id="lightbox"
-class="lightbox"
->
-
-<button
-class="close"
-onclick="closePhoto()">
-
-×
-
-</button>
-
-
-<button
-class="prev"
-onclick="previousPhoto()">
-
-‹
-
-</button>
-
-
-<img
-id="bigPhoto"
-src=""
->
-
-
-<button
-class="next"
-onclick="nextPhoto()">
-
-›
-
-</button>
-
-</div>
-
-
-<footer>
-
-♡
-
-</footer>
-
-
-<!-- MUSIK -->
-
-<audio
-id="music"
-loop>
-
-<source
-src="music/music.mp3"
-type="audio/mpeg">
-
-</audio>
-
-
-<script>
-
-
-/* =========================
-   DAFTAR FOTO
-
-   EDIT DI SINI
-========================= */
-
-const photos = [
-
-"gallery/foto1.jpg",
-
-"gallery/foto2.jpg",
-
-"gallery/foto3.jpg",
-
-"gallery/foto4.jpg",
-
-"gallery/foto5.jpg",
-
-"gallery/foto6.jpg"
-
-];
-
-
-let current = 0;
-
-
-/* BUKA FOTO */
-
-function openPhoto(index){
-
-    current = index;
-
-    document
-    .getElementById("bigPhoto")
-    .src = photos[current];
-
-    document
-    .getElementById("lightbox")
-    .classList.add("show");
-
-}
-
-
-/* TUTUP */
-
-function closePhoto(){
-
-    document
-    .getElementById("lightbox")
-    .classList.remove("show");
-
-}
-
-
-/* FOTO SEBELUMNYA */
-
-function previousPhoto(){
-
-    current--;
-
-    if(current < 0){
-
-        current =
-        photos.length - 1;
-
-    }
-
-    document
-    .getElementById("bigPhoto")
-    .src = photos[current];
-
-}
-
-
-/* FOTO BERIKUTNYA */
-
-function nextPhoto(){
-
-    current++;
-
-    if(current >= photos.length){
-
-        current = 0;
-
-    }
-
-    document
-    .getElementById("bigPhoto")
-    .src = photos[current];
-
-}
-
-
-/* MUSIK */
-
-function toggleMusic(){
-
-    const music =
-    document.getElementById("music");
-
-    if(music.paused){
-
-        music.play();
-
-    }else{
-
-        music.pause();
-
-    }
-
-}
-
-
-/* KLIK DI LUAR FOTO */
-
-document
-.getElementById("lightbox")
-.addEventListener(
-"click",
-function(e){
-
-    if(e.target === this){
-
-        closePhoto();
-
-    }
-
-});
-
-
-/* KEYBOARD */
-
-document.addEventListener(
-"keydown",
-function(e){
-
-    if(e.key === "ArrowLeft"){
-
-        previousPhoto();
-
-    }
-
-    if(e.key === "ArrowRight"){
-
-        nextPhoto();
-
-    }
-
-    if(e.key === "Escape"){
-
-        closePhoto();
-
-    }
-
-});
-
-</script>
-
+  <!-- JAVASCRIPT -->
+  <script src="js/galeri.js"></script>
 
 </body>
 
 </html>
+    
