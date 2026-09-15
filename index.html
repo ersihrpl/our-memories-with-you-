@@ -1,76 +1,111 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Website Saya</title>
+    <title>Website Saya</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/home.css">
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <h2>Website Saya</h2>
+    <!-- ================= NAVBAR ================= -->
 
-    <ul>
-      <li>
-        <a href="index.html">Home</a>
-      </li>
+    <nav class="navbar">
 
-      <li>
-        <a href="#about">Tentang</a>
-      </li>
+        <div class="logo">
+            Website Saya
+        </div>
 
-      <li>
-        <a href="galeri.html">Galeri</a>
-      </li>
-    </ul>
-  </nav>
+        <ul class="menu">
 
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-  <!-- HOME -->
-  <section class="home">
+            <li>
+                <a href="#tentang">Tentang</a>
+            </li>
 
-    <div class="home-content">
+            <li>
+                <a href="galeri.html">Galeri</a>
+            </li>
 
-      <h1>Selamat Datang</h1>
+        </ul>
 
-      <p>
-        Ini adalah halaman utama website saya.
-      </p>
-
-      <a href="galeri.html" class="button">
-        Lihat Galeri
-      </a>
-
-    </div>
-
-  </section>
+    </nav>
 
 
-  <!-- TENTANG -->
-  <section class="about" id="about">
+    <!-- ================= HOME ================= -->
 
-    <h2>Tentang Saya</h2>
+    <section class="home">
 
-    <p>
-      Tulis informasi tentang kamu di sini.
-    </p>
+        <div class="home-content">
 
-  </section>
+            <p class="small-title">
+                SELAMAT DATANG
+            </p>
+
+            <h1>
+                Website Saya
+            </h1>
+
+            <p class="description">
+                Ini adalah halaman utama website saya.
+                Kamu bisa mengubah tulisan ini sesuai keinginan.
+            </p>
+
+            <a href="galeri.html" class="button">
+                Lihat Galeri
+            </a>
+
+        </div>
+
+    </section>
 
 
-  <!-- JAVASCRIPT -->
-  <script src="js/script.js"></script>
+    <!-- ================= TENTANG ================= -->
+
+    <section class="tentang" id="tentang">
+
+        <div class="tentang-content">
+
+            <p class="small-title">
+                TENTANG
+            </p>
+
+            <h2>
+                Tentang Saya
+            </h2>
+
+            <p>
+                Tulis informasi tentang kamu di sini.
+                Misalnya nama, hobi, sekolah, atau informasi
+                lain yang ingin kamu tampilkan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Website Saya
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
 
 </body>
-
-</html>         
+</html>
