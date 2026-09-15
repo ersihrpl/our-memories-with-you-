@@ -1,0 +1,85 @@
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 15px 25px;
+
+  background: white;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  z-index: 1000;
+}
+
+
+/* NAMA WEBSITE */
+
+nav h2 {
+  font-size: 20px;
+}
+
+
+/* MENU */
+
+nav ul {
+  display: flex;
+
+  gap: 20px;
+
+  list-style: none;
+}
+
+
+/* LINK */
+
+nav a {
+  color: #333;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+
+/* SAAT DISENTUH */
+
+nav a:hover {
+  color: #999;
+}
+
+
+/* TAMPILAN HP */
+
+@media (max-width: 600px) {
+
+  nav {
+    padding: 12px 15px;
+  }
+
+  nav h2 {
+    font-size: 17px;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+}
