@@ -4,36 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Our Memories ♡</title>
+    <title>Our Memories</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- AUDIO -->
+    <audio id="bgMusic" loop>
+        <source src="music/music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- NAVBAR -->
+    <header>
+
+        <div class="logo">
+            OUR MEMORIES
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Galeri</a>
+        </nav>
+
+        <button onclick="toggleMusic()" id="musicButton">
+            ♫
+        </button>
+
+    </header>
+
+
     <!-- OPENING -->
-    <section id="opening" class="opening">
+    <section class="opening" id="opening">
 
         <div class="opening-content">
 
-            <p>A LITTLE COLLECTION OF</p>
+            <p class="small-text">
+                A COLLECTION OF
+            </p>
 
             <h1>
                 Our<br>
-                <i>Memories</i>
+                Memories
             </h1>
 
-            <span>
-                foto, video, dan cerita<br>
-                yang ingin kita simpan selamanya.
-            </span>
+            <p>
+                Beberapa momen mungkin sederhana,<br>
+                tapi selalu punya tempat untuk dikenang.
+            </p>
 
-            <button onclick="openMemory()">
+            <button onclick="startMemories()" class="main-button">
                 Lihat Memories ♡
             </button>
 
@@ -42,80 +64,62 @@
     </section>
 
 
-    <!-- WEBSITE -->
-    <main id="website" class="website">
+    <!-- MAIN CONTENT -->
+    <main id="mainContent">
 
-        <header>
-
-            <div>
-                OUR MEMORIES
-            </div>
-
-            <button onclick="toggleMusic()" id="musicButton">
-                ♫
-            </button>
-
-        </header>
-
-
-        <!-- INTRO -->
+        <!-- HERO -->
         <section class="hero">
 
-            <p>A COLLECTION OF LITTLE MOMENTS</p>
+            <p class="small-text">
+                MOMENTS WE KEEP
+            </p>
 
             <h2>
                 Some moments<br>
-                <i>deserve to stay.</i>
+                deserve to stay.
             </h2>
 
-            <span>
-                Putar dan nikmati kenangan kita
-                satu per satu.
-            </span>
+            <p>
+                Kumpulan cerita kecil yang pernah kita lalui.
+            </p>
 
         </section>
 
 
-        <!-- MEMORY VIEWER -->
+        <!-- MEMORY -->
         <section class="memory-section">
-
-            <div class="counter">
-
-                <span id="currentNumber">01</span>
-                /
-                <span id="totalNumber">04</span>
-
-            </div>
-
 
             <div class="memory-container">
 
-                <img
-                    id="memoryImage"
-                    class="memory-media"
-                    src=""
-                    alt="Memory"
-                >
+                <!-- IMAGE / VIDEO -->
+                <div class="media-container" id="mediaContainer">
+                    <img
+                        id="memoryImage"
+                        src=""
+                        alt="Memory"
+                    >
 
-                <video
-                    id="memoryVideo"
-                    class="memory-media"
-                    playsinline
-                ></video>
+                    <video
+                        id="memoryVideo"
+                        controls
+                        style="display:none;"
+                    ></video>
+                </div>
 
 
+                <!-- INFORMATION -->
                 <div class="memory-info">
 
-                    <small id="memoryDate">
-                        MEMORY
-                    </small>
+                    <p id="memoryDate" class="small-text">
+                        MOMENT 01
+                    </p>
 
-                    <h3 id="memoryTitle">
-                        Our Moment
-                    </h3>
+                    <h2 id="memoryTitle">
+                        The beginning
+                    </h2>
 
-                    <p id="memoryDescription">
-                        A little memory.
+                    <p id="memoryText">
+                        Satu momen kecil yang ingin selalu diingat.
                     </p>
 
                 </div>
@@ -123,19 +127,16 @@
             </div>
 
 
-            <!-- BUTTON -->
+            <!-- CONTROLS -->
             <div class="controls">
 
-                <button onclick="previousMemory()">
+                <button onclick="prevMemory()">
                     ←
                 </button>
 
-                <button
-                    id="playButton"
-                    onclick="toggleSlideshow()"
-                >
-                    ▶
-                </button>
+                <span id="memoryNumber">
+                    01 / 04
+                </span>
 
                 <button onclick="nextMemory()">
                     →
@@ -143,8 +144,27 @@
 
             </div>
 
+        </section>
 
-            <div id="dots" class="dots"></div>
+
+        <!-- GALLERY LINK -->
+        <section class="gallery-preview">
+
+            <p class="small-text">
+                MORE MEMORIES
+            </p>
+
+            <h2>
+                See all our photos.
+            </h2>
+
+            <p>
+                Lihat semua foto dan momen yang sudah disimpan.
+            </p>
+
+            <a href="gallery.html" class="main-button">
+                Buka Galeri ♡
+            </a>
 
         </section>
 
@@ -152,31 +172,25 @@
         <!-- ENDING -->
         <section class="ending">
 
-            <p>A LITTLE MESSAGE</p>
+            <p class="small-text">
+                UNTIL THE NEXT STORY
+            </p>
 
             <h2>
-                Thank you for<br>
-                <i>being part of the story.</i>
+                And this is<br>
+                only the beginning.
             </h2>
 
-            <div class="heart">
-                ♡
-            </div>
+            <p>
+                Masih banyak cerita yang belum ditulis.
+            </p>
 
         </section>
 
     </main>
 
 
-    <!-- MUSIC -->
-    <audio
-        id="backgroundMusic"
-        loop
-    >
-        <source src="music/music.mp3" type="audio/mpeg">
-    </audio>
-
-
+    <!-- SCRIPT -->
     <script src="script.js"></script>
 
 </body>
