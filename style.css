@@ -1,25 +1,430 @@
 /* =========================
-   PENGATURAN DASAR WEBSITE
+   DASAR
 ========================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, sans-serif;
-
-  background: #f8f5f0;
-
-  color: #333;
+    font-family: Arial, sans-serif;
+    background: #f8f5f0;
+    color: #333;
 }
 
-a {
-  text-decoration: none;
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    padding: 0 7%;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+    z-index: 9999;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+
+
+/* LINK */
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #999;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    min-height: 100vh;
+
+    padding: 100px 20px 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.home-content {
+    max-width: 700px;
+}
+
+
+/* TEKS KECIL */
+
+.small-title {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #888;
+
+    margin-bottom: 15px;
+}
+
+
+/* JUDUL */
+
+.home h1 {
+    font-size: 55px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+
+/* DESKRIPSI */
+
+.description {
+    max-width: 550px;
+
+    margin: 0 auto 30px;
+
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   TOMBOL
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: #333;
+
+    color: white;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   TENTANG
+========================= */
+
+.tentang {
+    min-height: 60vh;
+
+    padding: 100px 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.tentang-content {
+    max-width: 700px;
+}
+
+.tentang h2 {
+    font-size: 38px;
+
+    margin-bottom: 20px;
+}
+
+.tentang p:last-child {
+    color: #666;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #333;
+
+    color: white;
+}
+
+
+/* =========================
+   HALAMAN GALERI
+========================= */
+
+.galeri-page {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 120px 25px 80px;
+}
+
+
+/* JUDUL GALERI */
+
+.galeri-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.galeri-header h1 {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+.galeri-header p:last-child {
+    color: #777;
+}
+
+
+/* =========================
+   GRID FOTO
+========================= */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* KOTAK FOTO */
+
+.gallery-item {
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    cursor: pointer;
+}
+
+
+/* FOTO */
+
+.gallery-item img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+/* EFEK FOTO */
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   POPUP FOTO
+========================= */
+
+.popup {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 99999;
+}
+
+.popup img {
+    max-width: 95%;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+
+    top: 15px;
+    right: 25px;
+
+    color: white;
+
+    font-size: 45px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   KHUSUS HP
+========================= */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 60px;
+
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+
+    /* HOME */
+
+    .home {
+        padding-top: 90px;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+
+    /* TENTANG */
+
+    .tentang h2 {
+        font-size: 30px;
+    }
+
+
+    /* GALERI */
+
+    .galeri-page {
+        padding: 100px 15px 50px;
+    }
+
+    .galeri-header h1 {
+        font-size: 32px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .gallery-item img {
+        height: 180px;
+    }
+
+
+    /* POPUP */
+
+    .close {
+        right: 15px;
+        top: 10px;
+    }
+
 }
